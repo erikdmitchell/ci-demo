@@ -1,0 +1,17 @@
+{
+    "name": "erikmitchell/ci-demo",
+    "description": "CI Demo",
+    "type": "project",
+    "require-dev": {
+        "phpunit/phpunit": "^6.5",
+        "squizlabs/php_codesniffer": "*",
+        "wp-coding-standards/wpcs": "^0.14.0"
+    },
+    "authors": [
+        {
+            "name": "Erik",
+            "email": "erikdmitchell@gmail.com"
+        }
+    ],
+    "require": {}
+}
