@@ -13,5 +13,16 @@
             "email": "erikdmitchell@gmail.com"
         }
     ],
-    "require": {}
+    "require": {},
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "erikdmitchell\\ci-demo\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "erikdmitchell\\ci-demo\\": "tests"
+        }
+    }
 }
