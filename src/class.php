@@ -1,4 +1,6 @@
 <?php
+  
+namespace erikdmitchell\ci_demo;
     
 class CI_Demo {
     
