@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<phpunit bootstrap="vendor/autoload.php"
+<phpunit bootstrap="./vendor/autoload.php"
     colors="true"
 	verbose="true"
 	convertErrorsToExceptions="true"
@@ -8,7 +8,7 @@
 	convertWarningsToExceptions="true">
     <testsuites>
         <testsuite name="CI Demo Test Suite">
-            <directory suffix=".php">tests/</directory>
+            <directory>./tests</directory>
         </testsuite>
     </testsuites>
     <filter>
