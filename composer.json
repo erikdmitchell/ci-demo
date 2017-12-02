@@ -1,5 +1,5 @@
 {
-    "name": "erikmitchell/ci-demo",
+    "name": "erikmitchell/ci_demo",
     "description": "CI Demo",
     "type": "project",
     "require-dev": {
