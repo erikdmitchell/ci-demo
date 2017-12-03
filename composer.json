@@ -10,7 +10,8 @@
         "phpunit/phpunit": "^5.7",
         "squizlabs/php_codesniffer": "3.*",
         "wp-coding-standards/wpcs": "^0.14.0",
-        "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3"
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3",
+        "wimg/php-compatibility": "^8.0"
     },
     "license": "MIT",
     "authors": [
@@ -32,6 +33,8 @@
     "scripts": {
         "test": "phpunit",
         "check-style": "phpcs -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests",
-        "fix-style": "phpcbf -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests"
+        "fix-style": "phpcbf -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests",
+        "phpcs": "phpcs -s -p --standard=./phpcs.ruleset.xml",
+        "phpcbf": "phpcs -p --standard=./phpcs.ruleset.xml"
     }    
 }
