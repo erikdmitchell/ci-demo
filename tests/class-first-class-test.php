@@ -15,8 +15,8 @@ class First_Class_Test extends \PHPUnit\Framework\TestCase {
      * Test encoding string: string
      */
     public function testEncodeStringString() {
-        $firstclass = new FirstClass();
-        $encoded    = $firstclass->encodeString( 'string' );
+        $firstclass = new First_Class();
+        $encoded    = $firstclass->encode_string( 'string' );
         $this->assertSame( $encoded, '120rwp' );
     }
 
@@ -24,8 +24,8 @@ class First_Class_Test extends \PHPUnit\Framework\TestCase {
      * Test encoding empty string
      */
     public function testEncodeStringWithEmptyString() {
-        $firstclass = new FirstClass();
-        $encoded    = $firstclass->encodeString( '' );
+        $firstclass = new First_Class();
+        $encoded    = $firstclass->encode_string( '' );
         $this->assertSame( $encoded, '' );
     }
 
@@ -33,8 +33,8 @@ class First_Class_Test extends \PHPUnit\Framework\TestCase {
      * Test decoding empty string
      */
     public function testDecodeStringWithEmptyString() {
-        $firstclass = new FirstClass();
-        $decoded    = $firstclass->decodeString( '' );
+        $firstclass = new First_Class();
+        $decoded    = $firstclass->decode_string( '' );
         $this->assertSame( $decoded, '' );
     }
 
@@ -42,7 +42,7 @@ class First_Class_Test extends \PHPUnit\Framework\TestCase {
      * Test encoding upper case strings
      */
     public function testEncodeStringWithUppercaseString() {
-        $firsclass = new FirstClass();
+        $firsclass = new First_Class();
         $encoded   = $firsclass->encodeString( 'STRING' );
         $this->assertSame( $encoded, '120rwp' );
     }
@@ -51,7 +51,7 @@ class First_Class_Test extends \PHPUnit\Framework\TestCase {
      * Test decoding upper case strings
      */
     public function testDecodeStringWithUppercaseString() {
-        $firsclass = new FirstClass();
+        $firsclass = new First_Class();
         $decoded   = $firsclass->decodeString( '120RWP' );
         $this->assertSame( $decoded, 'string' );
     }
@@ -60,7 +60,7 @@ class First_Class_Test extends \PHPUnit\Framework\TestCase {
      * Test encoding with non existent characters
      */
     public function testEncodeStringWithNonExistentCharacter() {
-        $firsclass = new FirstClass();
+        $firsclass = new First_Class();
         $this->expectException( \Exception::class );
         $this->expectExceptionMessage( 'Please provide only numbers and alphanumerical characters' );
         $encoded = $firsclass->encodeString( '@#!' );
@@ -70,7 +70,7 @@ class First_Class_Test extends \PHPUnit\Framework\TestCase {
      * Test decoding with non existent characters
      */
     public function testDecodeStringWithNonExistentCharacter() {
-        $firsclass = new FirstClass();
+        $firsclass = new First_Class();
         $this->expectException( \Exception::class );
         $this->expectExceptionMessage( 'Please provide only numbers and alphanumerical characters' );
         $decoded = $firsclass->decodeString( '@#!' );
@@ -80,8 +80,8 @@ class First_Class_Test extends \PHPUnit\Framework\TestCase {
      * Test encoding numbers
      */
     public function testEncodeStringWithNumbers() {
-        $firstclass = new FirstClass();
-        $encoded    = $firstclass->encodeString( '456' );
+        $firstclass = new First_Class();
+        $encoded    = $firstclass->encode_string( '456' );
         $this->assertSame( $encoded, 'def' );
     }
 
@@ -89,8 +89,8 @@ class First_Class_Test extends \PHPUnit\Framework\TestCase {
      * Test decoding numbers
      */
     public function testDecodeStringWithNumbers() {
-        $firstclass = new FirstClass();
-        $decoded    = $firstclass->decodeString( '456' );
+        $firstclass = new First_Class();
+        $decoded    = $firstclass->decode_string( '456' );
         $this->assertSame( $decoded, 'vwx' );
     }
 }
