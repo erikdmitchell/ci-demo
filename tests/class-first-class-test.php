@@ -1,10 +1,18 @@
 <?php
 namespace erikdmitchell\ci_demo;
 
-class FirstClassTest extends \PHPUnit\Framework\TestCase {
+/**
+ * First Class Test.
+ *
+ * @class    First_Class_Test
+ * @package
+ * @category Class
+ * @author
+ */
+class First_Class_Test extends \PHPUnit\Framework\TestCase {
 
     /**
-     * test encoding string: string
+     * Test encoding string: string
      */
     public function testEncodeStringString() {
         $firstclass = new FirstClass();
@@ -13,7 +21,7 @@ class FirstClassTest extends \PHPUnit\Framework\TestCase {
     }
 
     /**
-     * test encoding empty string
+     * Test encoding empty string
      */
     public function testEncodeStringWithEmptyString() {
         $firstclass = new FirstClass();
@@ -22,7 +30,7 @@ class FirstClassTest extends \PHPUnit\Framework\TestCase {
     }
 
     /**
-     * test decoding empty string
+     * Test decoding empty string
      */
     public function testDecodeStringWithEmptyString() {
         $firstclass = new FirstClass();
@@ -31,7 +39,7 @@ class FirstClassTest extends \PHPUnit\Framework\TestCase {
     }
 
     /**
-     * test encoding upper case strings
+     * Test encoding upper case strings
      */
     public function testEncodeStringWithUppercaseString() {
         $firsclass = new FirstClass();
@@ -40,7 +48,7 @@ class FirstClassTest extends \PHPUnit\Framework\TestCase {
     }
 
     /**
-     * test decoding upper case strings
+     * Test decoding upper case strings
      */
     public function testDecodeStringWithUppercaseString() {
         $firsclass = new FirstClass();
@@ -49,7 +57,7 @@ class FirstClassTest extends \PHPUnit\Framework\TestCase {
     }
 
     /**
-     * test encoding with non existent characters
+     * Test encoding with non existent characters
      */
     public function testEncodeStringWithNonExistentCharacter() {
         $firsclass = new FirstClass();
@@ -59,7 +67,7 @@ class FirstClassTest extends \PHPUnit\Framework\TestCase {
     }
 
     /**
-     * test decoding with non existent characters
+     * Test decoding with non existent characters
      */
     public function testDecodeStringWithNonExistentCharacter() {
         $firsclass = new FirstClass();
@@ -69,7 +77,7 @@ class FirstClassTest extends \PHPUnit\Framework\TestCase {
     }
 
     /**
-     * test encoding numbers
+     * Test encoding numbers
      */
     public function testEncodeStringWithNumbers() {
         $firstclass = new FirstClass();
@@ -78,7 +86,7 @@ class FirstClassTest extends \PHPUnit\Framework\TestCase {
     }
 
     /**
-     * test decoding numbers
+     * Test decoding numbers
      */
     public function testDecodeStringWithNumbers() {
         $firstclass = new FirstClass();
