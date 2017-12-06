@@ -6,6 +6,7 @@
 	<description>CI Demo dev PHP_CodeSniffer ruleset.</description>
 
 	<!-- Exclude paths -->
+	<exclude-pattern>*/node_modules/*</exclude-pattern>
 	<exclude-pattern>*/vendor/*</exclude-pattern>
 
 	<!-- Configs -->
@@ -14,6 +15,9 @@
 
 	<!-- Rules -->
 	<rule ref="PHPCompatibility"/>
+
+	<rule ref="WordPress-Core" />
+	<rule ref="WordPress-Docs" />
 
 	<rule ref="WordPress">
 		<exclude name="Generic.WhiteSpace.DisallowSpaceIndent" />
