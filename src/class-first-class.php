@@ -26,7 +26,7 @@ class First_Class {
 
         for ( $i = 0; $i < strlen( $string ); $i++ ) {
             $pos = strpos( $src, $string[ $i ] );
-            if ( $pos === false ) {
+            if ( false === $pos ) {
                 return 'Please provide only numbers and alphanumerical characters';
             }
             $string[ $i ] = $dst[ $pos ];
@@ -46,9 +46,10 @@ class First_Class {
         $string = strtolower( $string );
         $src    = 'jklmnopqrstuvwxyz0123456789abcdefghi ';
         $dst    = 'abcdefghijklmnopqrstuvwxyz0123456789 ';
+        
         for ( $i = 0; $i < strlen( $string ); $i++ ) {
             $pos = strpos( $src, $string[ $i ] );
-            if ( $pos === false ) {
+            if ( false === $pos ) {
                 return 'Please provide only numbers and alphanumerical characters';
             }
             $string[ $i ] = $dst[ $pos ];
