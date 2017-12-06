@@ -1,18 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<phpunit bootstrap="vendor/autoload.php"
-	colors="true"
+<phpunit bootstrap="tests/bootstrap.php"
+	backupGlobals="false"
 	verbose="true"
 	convertErrorsToExceptions="true"
 	convertNoticesToExceptions="true"
-	convertWarningsToExceptions="true">
+	convertWarningsToExceptions="true"
+    syntaxCheck="true"
+    >
 	<testsuites>
 		<testsuite name="CI Demo Test Suite">
-			<directory>tests</directory>
+			<directory suffix=".php">./tests</directory>
 		</testsuite>
 	</testsuites>
 	<filter>
-		<whitelist>
-			<directory suffix=".php">src/</directory>
+		<whitelist addUncoveredFilesFromWhitelist="true">
+			<directory suffix=".php">./src</directory>
 		</whitelist>
 	</filter>
 </phpunit>
+
+
+
+<!-- 			<directory prefix="test-" suffix=".php">./tests/</directory> -->
+

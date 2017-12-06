@@ -9,8 +9,7 @@ namespace erikdmitchell\ci_demo;
  * @category Class
  * @author
  */
-class First_Class_Test extends \PHPUnit\Framework\TestCase {
-
+class First_Class_Test extends WP_UnitTestCase {
     /**
      * Test encoding string: string
      */
